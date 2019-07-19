@@ -9,10 +9,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
-@Configuration
-@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+//@Configuration
+//@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class SpringSecurityConfiguration_InMemory
-		extends WebSecurityConfigurerAdapter {
+		/*extends WebSecurityConfigurerAdapter*/ {
 
 	@Autowired
 	protected void configureGlobal(AuthenticationManagerBuilder auth)
@@ -25,7 +25,7 @@ public class SpringSecurityConfiguration_InMemory
 				.roles("USER", "ADMIN");
 	}
 
-	@Override
+	//@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http
