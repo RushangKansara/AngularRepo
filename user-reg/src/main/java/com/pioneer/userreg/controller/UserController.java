@@ -43,6 +43,7 @@ public class UserController {
 	public ResponseEntity<List<UserDTO>> listAllUsers(){
 		List<UserDTO> users =  userRepository.findAll();
 		if(CollectionUtils.isEmpty(users)) {
+			logger.debug("User List : {}", users) ;
 			return new ResponseEntity<List<UserDTO>>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<List<UserDTO>>(users,HttpStatus.OK);

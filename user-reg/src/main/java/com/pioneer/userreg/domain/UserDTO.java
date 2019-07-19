@@ -67,4 +67,20 @@ public class UserDTO {
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("UserDTO [id=");
+		builder.append(id);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", address=");
+		builder.append(address);
+		builder.append(", email=");
+		builder.append(email);
+		builder.append("]");
+		return builder.toString();
+	}
+
+	
 }
