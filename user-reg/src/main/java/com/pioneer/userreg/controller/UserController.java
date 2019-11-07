@@ -75,7 +75,7 @@ public class UserController {
 		if(user != null) {
 			return new ResponseEntity<UserDTO>(user,HttpStatus.OK);
 		}else {
-			return new ResponseEntity<UserDTO>(new CustomErrorType("User with name " + name + "not found"), HttpStatus.NOT_FOUND);
+			return new ResponseEntity<UserDTO>(new CustomErrorType("User with name  " + name + "not found"), HttpStatus.NOT_FOUND);
 		}
 	}
 	
